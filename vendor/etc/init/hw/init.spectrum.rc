@@ -27,6 +27,8 @@ on property:sys.boot_completed=1
    setprop spectrum.support 1
    # Add kernel name
    setprop persist.spectrum.kernel Barairo
+   # Trigger selinux faker
+   write /sys/fs/selinux/enforce 1
 
 # Balance
 on property:persist.spectrum.profile=0
