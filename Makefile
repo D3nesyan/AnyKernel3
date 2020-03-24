@@ -6,7 +6,7 @@ DATE := $(shell date +'%Y%m%d-%H%M')
 
 ZIP := $(NAME)-$(VERSION)-$(DATE).zip
 
-EXCLUDE := Makefile README.md *.git* "$(NAME)-"*.zip*
+EXCLUDE := Makefile README.md *.git* "$(NAME)-"*.zip* .gitignore
 
 all: $(ZIP)
 
