@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Samurai Kernel by Ratoriku ‹a1063021545@gmail.com›
+kernel.string=Barairo Kernel by Ratoriku@github.com
 do.devicecheck=1
 do.modules=0
 do.systemless=1
