@@ -1,4 +1,4 @@
-NAME ?= Samurai-Kernel
+NAME ?= Barairo-Kernel
 
 VERSION ?= lavender
 
