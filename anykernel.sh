@@ -35,7 +35,7 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 mount -o rw,remount -t auto /vendor;
 chattr -R -i /vendor/etc/init/hw/;
 cp -rf $home/extra/* /vendor/etc/init/hw/;
-echo "import /vendor/etc/init/hw/init.spectrum.rc" > /vendor/etc/init/hw/init.qcom.rc;
+echo "import /vendor/etc/init/hw/init.spectrum.rc" >> /vendor/etc/init/hw/init.qcom.rc;
 chmod -R 0644 /vendor/etc/init/hw/*;
 chattr -R +i /vendor/etc/init/hw/;
 
