@@ -33,23 +33,7 @@ on property:persist.spectrum.profile=0
     write /sys/module/boost_control/parameters/dynamic_stune_boost 5
  
     write /sys/module/boost_control/parameters/app_launch_boost_ms 1000
- 
-    
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2208000
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-    
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1843200
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1113600
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    
+        
     write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/efficient_freq "1113600 1747200"
     write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/up_delay "30 40"
     write /sys/devices/system/cpu/cpu4/cpufreq/schedhorizon/efficient_freq "1747200 2150400"
@@ -71,23 +55,16 @@ on property:persist.spectrum.profile=1
     write /sys/module/boost_control/parameters/dynamic_stune_boost 0
  
     write /sys/module/boost_control/parameters/app_launch_boost_ms 0
-
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2208000
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
- 
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1843200
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
     
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 2208000
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1843200
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/efficient_freq "0"
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/up_delay "0"
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedhorizon/efficient_freq "0"
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedhorizon/up_delay "0"
     
- 
+    write /sys/module/boost_control/parameters/input_boost_freq_perf 0
+    write /sys/module/boost_control/parameters/input_boost_freq_lp 0
+    write /sys/module/boost_control/parameters/lmk_boost_ms 0
+     
 # Battery
 on property:persist.spectrum.profile=2
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedhorizon"
@@ -100,21 +77,6 @@ on property:persist.spectrum.profile=2
     write /sys/module/boost_control/parameters/dynamic_stune_boost 0
  
     write /sys/module/boost_control/parameters/app_launch_boost_ms 0
- 
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1958400
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
- 
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1536000
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1113600
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
     
     write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/efficient_freq "0"
     write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/up_delay "0"
@@ -137,22 +99,7 @@ on property:persist.spectrum.profile=3
     write /sys/module/boost_control/parameters/dynamic_stune_boost 50
  
     write /sys/module/boost_control/parameters/app_launch_boost_ms 1500
- 
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2208000
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
- 
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1843200
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    
-    chmod 0777 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1113600
-    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
-    chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    
+        
     write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/efficient_freq "0"
     write /sys/devices/system/cpu/cpu0/cpufreq/schedhorizon/up_delay "0"
     write /sys/devices/system/cpu/cpu4/cpufreq/schedhorizon/efficient_freq "0"
