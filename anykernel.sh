@@ -42,7 +42,7 @@ chmod -R 0755 /vendor/bin/*;
 chattr -R +i /vendor/etc/init/hw/;
 chattr -R +i /vendor/bin/;
 chattr -R -i /vendor/etc/perf/;
-rm -rf /vendor/etc/perf/perfboostsconfig.xml
+rm -rf /vendor/etc/perf/perfboostsconfig.xml;
 mount -o ro,remount -t auto /vendor;
 
 ## AnyKernel install
