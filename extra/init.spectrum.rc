@@ -142,7 +142,7 @@ on property:persist.spectrum.profile=3
  
     write /dev/stune/top-app/schedtune.boost 0
     
-    write /sys/module/boost_control/parameters/cpubw_boost_freq 6881
+    write /sys/module/boost_control/parameters/cpubw_boost_freq 5931
     
     write /sys/module/boost_control/parameters/dynamic_stune_boost 50
  
