@@ -59,9 +59,6 @@ on property:persist.spectrum.profile=0
     write /sys/module/boost_control/parameters/input_boost_freq_lp 1401600
     write /sys/module/boost_control/parameters/lmk_boost_ms 100
     
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    
 # Performance
 on property:persist.spectrum.profile=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
@@ -89,9 +86,7 @@ on property:persist.spectrum.profile=1
     chmod 0777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1843200
     chmod 0444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
+    
  
 # Battery
 on property:persist.spectrum.profile=2
@@ -130,11 +125,6 @@ on property:persist.spectrum.profile=2
     write /sys/module/boost_control/parameters/input_boost_freq_lp 0
     write /sys/module/boost_control/parameters/lmk_boost_ms 0
 
-    
-    write /dev/cpuset/top-app/cpus 0-5
-    write /dev/cpuset/foreground/cpus 0-5
- 
- 
 # Gaming
 on property:persist.spectrum.profile=3
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
@@ -171,7 +161,4 @@ on property:persist.spectrum.profile=3
     write /sys/module/boost_control/parameters/input_boost_freq_perf 2150400
     write /sys/module/boost_control/parameters/input_boost_freq_lp 1747200
     write /sys/module/boost_control/parameters/lmk_boost_ms 1000
-     
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
  
