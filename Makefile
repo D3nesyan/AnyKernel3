@@ -2,7 +2,7 @@ NAME ?= Barairo-Kernel
 
 VERSION ?= lavender
 
-DATE := $(shell date +'%Y%m%d-%H%M')
+DATE := $(shell date +'%m%d-%H%M')
 
 ZIP := $(NAME)-$(VERSION)-$(DATE).zip
 
