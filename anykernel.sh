@@ -35,14 +35,15 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 mount -o rw,remount -t auto /vendor;
 chattr -R -i /vendor/etc/init/hw/;
 chattr -R -i /vendor/bin/;
+chattr -R -i /vendor/etc/perf/;
 cp -rf $home/vendor/etc/init/* /vendor/etc/init;
 cp -rf $home/vendor/bin/* /vendor/bin;
+rm -rf /vendor/etc/perf/perfboostsconfig.xml;
 chmod -R 0644 /vendor/etc/init/*;
 chmod -R 0755 /vendor/bin/*;
 chattr -R +i /vendor/etc/init/hw/;
 chattr -R +i /vendor/bin/;
-chattr -R -i /vendor/etc/perf/;
-rm -rf /vendor/etc/perf/perfboostsconfig.xml;
+chattr -R +i /vendor/etc/perf/;
 mount -o ro,remount -t auto /vendor;
 
 ## AnyKernel install
