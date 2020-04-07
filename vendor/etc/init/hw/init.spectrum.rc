@@ -29,7 +29,7 @@ on property:sys.boot_completed=1
    setprop persist.spectrum.kernel Barairo
    # Trigger selinux faker
    write /sys/fs/selinux/enforce 1
-   
+
 # Balance
 on property:persist.spectrum.profile=0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
@@ -53,7 +53,7 @@ on property:persist.spectrum.profile=0
     write /sys/module/boost_control/parameters/input_boost_freq_perf 1747200
     write /sys/module/boost_control/parameters/input_boost_freq_lp 1401600
     write /sys/module/boost_control/parameters/lmk_boost_ms 100
-    
+
 # Performance
 on property:persist.spectrum.profile=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
@@ -77,7 +77,7 @@ on property:persist.spectrum.profile=1
     write /sys/module/boost_control/parameters/input_boost_freq_perf 0
     write /sys/module/boost_control/parameters/input_boost_freq_lp 0
     write /sys/module/boost_control/parameters/lmk_boost_ms 0
-    
+
 # Battery
 on property:persist.spectrum.profile=2
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedhorizon"
@@ -101,7 +101,7 @@ on property:persist.spectrum.profile=2
     write /sys/module/boost_control/parameters/input_boost_freq_perf 0
     write /sys/module/boost_control/parameters/input_boost_freq_lp 0
     write /sys/module/boost_control/parameters/lmk_boost_ms 0
-    
+
 # Gaming
 on property:persist.spectrum.profile=3
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
@@ -125,4 +125,3 @@ on property:persist.spectrum.profile=3
     write /sys/module/boost_control/parameters/input_boost_freq_perf 2150400
     write /sys/module/boost_control/parameters/input_boost_freq_lp 1747200
     write /sys/module/boost_control/parameters/lmk_boost_ms 1000
-    
