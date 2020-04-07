@@ -5,14 +5,7 @@
 # Initialization
 on property:sys.boot_completed=1
    #Fuck powerhal
-   chown root root /dev/stune/top-app/schedtune.boost   
-   # Setup runtime blkio
-   # value for group_idle is us
-   write /dev/blkio/blkio.weight 1000
-   write /dev/blkio/background/blkio.weight 10
-   write /dev/blkio/blkio.group_idle 2000
-   write /dev/blkio/background/blkio.group_idle 0
-   
+   chown root root /dev/stune/top-app/schedtune.boost
    # Set default profile on first boot
    exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
    exec u:r:su:s0 root root -- /vendor/bin/init.spectrum.sh
