@@ -29,7 +29,6 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
-import /vendor/etc/init/hw/init.spectrum.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -533,7 +532,11 @@ on property:sys.boot_completed=1
     write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
+    # schedtune boost
+    chown root root /dev/stune/top-app/schedtune.boost
     write /dev/stune/top-app/schedtune.boost 5
+    # Trigger selinux faker
+    write /sys/fs/selinux/enforce 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
