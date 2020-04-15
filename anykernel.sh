@@ -27,13 +27,8 @@ ramdisk_compression=auto;
 
 # Extra
 mount -o rw,remount -t auto /vendor;
-chattr -R -i /vendor/etc/init/hw/;
 chattr -R -i /vendor/etc/perf/;
-cp -f $home/vendor/etc/init/hw/* /vendor/etc/init/hw;
-echo "import /vendor/etc/init/hw/init.barairo.rc" >> /vendor/etc/init/hw/init.qcom.rc
 rm -f /vendor/etc/perf/perfboostsconfig.xml;
-chmod -R 0644 /vendor/etc/init/hw/*;
-chattr -R +i /vendor/etc/init/hw/;
 chattr -R +i /vendor/etc/perf/;
 mount -o ro,remount -t auto /vendor;
 
