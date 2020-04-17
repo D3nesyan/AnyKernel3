@@ -28,7 +28,8 @@ ramdisk_compression=auto;
 # Extra
 mount -o rw,remount -t auto /vendor;
 chattr -R -i /vendor/etc/perf/;
-rm -f /vendor/etc/perf/perfboostsconfig.xml;
+cp -f $home/vendor/etc/perf/* /vendor/etc/perf/
+chmod -R 0644 /vendor/etc/perf/*
 chattr -R +i /vendor/etc/perf/;
 mount -o ro,remount -t auto /vendor;
 
