@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Barairo Kernel by Ratoriku@github.com
+kernel.string=Barairo Kernel R3 by Ratoriku@github.com
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -26,6 +26,7 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
+echo "Installing EAS perf config"
 mount -o rw,remount -t auto /vendor;
 chattr -R -i /vendor/etc/perf/;
 cp -f $home/vendor/etc/perf/* /vendor/etc/perf/

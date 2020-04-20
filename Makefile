@@ -1,4 +1,4 @@
-NAME ?= Barairo-Kernel
+NAME ?= Barairo-Kernel-R3
 
 VERSION ?= lavender
 
