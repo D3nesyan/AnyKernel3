@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Barairo Kernel R3.2 by Ratoriku@github.com
+kernel.string=Barairo Kernel R3.3 by Ratoriku@github.com
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -26,12 +26,13 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
+
 mount -o rw,remount -t auto /vendor;
 chattr -R -i /vendor/etc/perf/;
-cp -f $home/vendor/etc/perf/* /vendor/etc/perf/
-chmod -R 0644 /vendor/etc/perf/*
-chattr -R +i /vendor/etc/perf/;
-mount -o ro,remount -t auto /vendor;
+
+ui_print "  • Creating Magisk module"
+rm -rf /data/adb/modules/barairo;
+cp -rf $home/magisk_module /data/adb/modules/barairo;
 
 ## AnyKernel install
 dump_boot;

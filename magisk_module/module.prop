@@ -1,0 +1,7 @@
+id=barairo_kernel
+name=Barairo Specific
+version=v1.0
+versionCode=0428
+author=Ratoriku
+description=Magisk Module for sdm660 EAS perf configuration.  Credit:@uvera
+support=https://github.com/Ratoriku
