@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 # PaperMoon Specific Magisk Module
-# Writen by Ratoriku <a1063021545@gmail.com>
+# Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 
 # Permissions for PaperMoon Manager
 chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/*

@@ -25,8 +25,6 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
-mount -o rw,remount -t auto /vendor;
-chattr -R -i /vendor/etc/perf/;
 ui_print "  • Creating PaperMoon Specific Magisk module"
 rm -rf /data/adb/modules/barairo;
 cp -rf $home/magisk_module /data/adb/modules/barairo;
