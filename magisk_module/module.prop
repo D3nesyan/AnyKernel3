@@ -1,7 +1,7 @@
 id=barairo
 name=PaperMoon Specific
-version=v1.0
-versionCode=0428
+version=v2.0
+versionCode=0507
 author=Ratoriku
-description=Magisk Module for sdm660 EAS perf configuration.  Credit:@uvera
+description=Optimizations for PaperMoon Kernel Credit: perf config from @uvera
 support=https://github.com/Ratoriku
