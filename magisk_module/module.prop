@@ -1,7 +1,7 @@
 id=barairo
 name=PaperMoon Specific
-version=v2.0
-versionCode=0507
+version=v2.1
+versionCode=0509
 author=Ratoriku
-description=Optimizations for PaperMoon Kernel Credit: perf config from @uvera
+description=Optimizations for PaperMoon Kernel \nCredit: perf config from @uvera
 support=https://github.com/Ratoriku
