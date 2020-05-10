@@ -2,6 +2,7 @@
 
 # PaperMoon Specific Magisk Module
 # Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
+MODDIR=${0%/*}
 
 # Permissions for PaperMoon Manager
 chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/*
