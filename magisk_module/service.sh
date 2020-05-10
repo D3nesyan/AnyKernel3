@@ -23,10 +23,24 @@ chmod 0644 /sys/bus/cpu/devices/cpu0/cpufreq/scaling_max_freq
 chmod 0644 /sys/bus/cpu/devices/cpu0/cpufreq/scaling_min_freq
 chmod 0644 /sys/bus/cpu/devices/cpu4/cpufreq/scaling_max_freq
 chmod 0644 /sys/bus/cpu/devices/cpu4/cpufreq/scaling_min_freq
-   
 
 # blkio configuration from coral
 echo 1000 > /dev/blkio/blkio.weight
 echo 200 > /dev/blkio/background/blkio.weight
 echo 2000 > /dev/blkio/blkio.group_idle
 echo 0 > /dev/blkio/background/blkio.group_idle
+
+# lj王者
+File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
+ 
+sed -i '/.*<int name="VulkanTryCount" value=".*" \/>/'d "$File"
+sed -i '/.*<int name="EnableVulkan" value=".*" \/>/'d "$File"
+sed -i '/.*<int name="EnableGLES3" value=".*" \/>/'d "$File"
+sed -i '/.*<int name="EnableMTR" value=".*" \/>/'d "$File"
+sed -i '/.*<int name="DisableMTR" value=".*" \/>/'d "$File"
+sed -i '2a \ \ \ \ <int name="VulkanTryCount" value="1" \/>' "$File";
+sed -i '3a \ \ \ \ <int name="EnableVulkan" value="3" \/>' "$File";
+sed -i '4a \ \ \ \ <int name="EnableGLES3" value="1" \/>' "$File";
+sed -i '5a \ \ \ \ <int name="EnableMTR" value="1" \/>' "$File";
+sed -i '6a \ \ \ \ <int name="DisableMTR" value="3" \/>' "$File";
+ 
