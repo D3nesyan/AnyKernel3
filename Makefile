@@ -1,4 +1,4 @@
-NAME ?= PaperMoon-Kernel-R3.6
+NAME ?= PaperMoon-Kernel-R3.7
 
 VERSION ?= lavender
 

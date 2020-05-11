@@ -31,7 +31,7 @@ echo 200 > /dev/blkio/background/blkio.weight
 echo 2000 > /dev/blkio/blkio.group_idle
 echo 0 > /dev/blkio/background/blkio.group_idle
 
-# lj王者
+# 王者荣耀
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
  
 sed -i '/.*<int name="VulkanTryCount" value=".*" \/>/'d "$File"
