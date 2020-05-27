@@ -25,7 +25,7 @@ chmod 0644 /sys/bus/cpu/devices/cpu0/cpufreq/scaling_min_freq
 chmod 0644 /sys/bus/cpu/devices/cpu4/cpufreq/scaling_max_freq
 chmod 0644 /sys/bus/cpu/devices/cpu4/cpufreq/scaling_min_freq
 
-# 王者荣耀
+# com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
  
 sed -i '/.*<int name="VulkanTryCount" value=".*" \/>/'d "$File"
