@@ -25,7 +25,7 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
-ui_print "  • Creating PaperMoon Specific Magisk module"
+ui_print " " " • Creating PaperMoon Specific Magisk module"
 rm -rf /data/adb/modules/barairo;
 cp -rf $home/magisk_module /data/adb/modules/barairo;
 
