@@ -400,11 +400,6 @@ if [ $? != 0 -o -z "$(ls bin)" ]; then
   abort "Busybox setup failed. Aborting...";
 fi;
 
-if [ -f banner ]; then
-  ui_printfile banner;
-  ui_print " " " ";
-fi;
-
 KERNEL_STRING="$(file_getprop anykernel.sh kernel.string)";
 ui_print "$KERNEL_STRING";
 if [ -f version ]; then
@@ -413,6 +408,11 @@ if [ -f version ]; then
   ui_print " ";
 fi;
 ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
+
+if [ -f banner ]; then
+  ui_printfile banner;
+  ui_print " ";
+fi;
 
 setup_env;
 
