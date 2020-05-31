@@ -28,6 +28,10 @@ chmod 0644 /sys/bus/cpu/devices/cpu4/cpufreq/scaling_min_freq
 # EAS Optimizations
 setprop sys.use_fifo_ui 1
 
+# MemeUI
+# Try to block miuibooster
+stop miuibooster
+
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
  
