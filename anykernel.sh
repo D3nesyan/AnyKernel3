@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=PaperMoon Kernel R3.9 by Ratoriku@github.com
+kernel.string=PaperMoon Kernel R4.0 by Ratoriku@github.com
 do.devicecheck=1
 do.modules=0
 do.systemless=1
