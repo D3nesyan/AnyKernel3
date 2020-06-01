@@ -411,7 +411,7 @@ ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
 
 if [ -f banner ]; then
   ui_printfile banner;
-  ui_print " " " " ";
+  ui_print " " " ";
 fi;
 
 setup_env;
@@ -437,5 +437,5 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " " "Welcome to PaperMoon";
+ui_print " " "Welcome to PaperMoon";
 ui_print "Enjoy !";
