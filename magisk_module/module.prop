@@ -1,7 +1,7 @@
 id=barairo
-name=PaperMoon Specific
+name=Majutsu Reiso (魔術礼装)
 version=v2.5
 versionCode=0606
 author=Ratoriku
-description=Optimizations for PaperMoon Kernel. Perf config from @uvera
+description=The Majutsu Reiso for EAS optimization in ShadowBoarder. Credits: @uvera
 support=https://github.com/Ratoriku
