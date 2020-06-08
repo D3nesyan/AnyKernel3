@@ -1,7 +1,7 @@
 id=barairo
 name=Majutsu Reiso (魔術礼装)
-version=v2.5
-versionCode=0606
+version=v2.6
+versionCode=0608
 author=Ratoriku
-description=The Majutsu Reiso for EAS optimization in ShadowBoarder. Credits: @uvera
+description=The Majutsu Reiso for ShadowBoarder. With some EAS optimizations. Credits: @uvera
 support=https://github.com/Ratoriku
