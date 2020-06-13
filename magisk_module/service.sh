@@ -11,6 +11,9 @@ setprop sys.use_fifo_ui 1
 # Try to block miuibooster
 # stop miuibooster
 
+# TAboost
+echo 1 > /dev/stune/top-app/schedtune.boost
+
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
  
