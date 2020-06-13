@@ -14,6 +14,12 @@ setprop sys.use_fifo_ui 1
 # TAboost
 echo 1 > /dev/stune/top-app/schedtune.boost
 
+# schedhorizon
+echo "0" > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/efficient_freq
+echo "0" > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_delay
+echo "0" > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/efficient_freq
+echo "0" > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_delay
+
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
  
