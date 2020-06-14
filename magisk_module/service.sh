@@ -15,9 +15,9 @@ setprop sys.use_fifo_ui 1
 echo 5 > /dev/stune/top-app/schedtune.boost
 
 # schedhorizon
-echo "1401600 1747200" > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/efficient_freq
-echo "50 60" > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_delay
-echo "2150400" > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/efficient_freq
+echo "1536000" > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/efficient_freq
+echo "60" > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_delay
+echo "1958400" > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/efficient_freq
 echo "60" > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_delay
 
 # com.tencent.tmgp.sgame
