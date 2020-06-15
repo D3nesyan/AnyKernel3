@@ -48,11 +48,6 @@ case "$ZIPFILE" in
     ;;
   *)
     patch_cmdline "mdss_dsi.framerate_override" ""
-    fr=$(cat /sdcard/framerate_override | tr -cd "[0-9]");
-    [ $fr -eq 63 ] && ui_print "  • Setting 63 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=1"
-    [ $fr -eq 66 ] && ui_print "  • Setting 66 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=2"
-    [ $fr -eq 70 ] && ui_print "  • Setting 66 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=3"
-    ;;;
 esac
 
 flash_boot;
