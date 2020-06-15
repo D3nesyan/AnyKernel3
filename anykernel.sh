@@ -28,6 +28,35 @@ ramdisk_compression=auto;
 ui_print " " "Tracing Majutsu Reiso (魔術礼装)"
 rm -rf /data/adb/modules/barairo;
 cp -rf $home/magisk_module /data/adb/modules/barairo;
+
+# Screen OC
+case "$ZIPFILE" in
+  *60fps*|*60hz*)
+    ui_print "  • Setting 60 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=0"
+    ;;
+  *63fps*|*63hz*)
+    ui_print "  • Setting 63 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=1"
+    ;;
+  *66fps*|*66hz*)
+    ui_print "  • Setting 66 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=2"
+    ;;
+  *70fps*|*70hz*)
+    ui_print "  • Setting 70 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=3"
+    ;;
+  *)
+    patch_cmdline "mdss_dsi.framerate_override" ""
+    fr=$(cat /sdcard/framerate_override | tr -cd "[0-9]");
+    [ $fr -eq 69 ] && ui_print "  • Setting 60 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=0"
+    [ $fr -eq 63 ] && ui_print "  • Setting 63 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=1"
+    [ $fr -eq 66 ] && ui_print "  • Setting 66 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=2"
+    [ $fr -eq 70 ] && ui_print "  • Setting 66 Hz refresh rate" && patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=3"
+    ;;
+esac
+
 ## AnyKernel install
 dump_boot;
 
