@@ -55,7 +55,7 @@ case "$ZIPFILE" in
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=70"
     ;;
   *)
-    patch_cmdline "mdss_dsi.framerate_override" ""
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=60"
 esac
 
 flash_boot;
