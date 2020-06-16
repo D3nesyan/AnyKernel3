@@ -34,17 +34,25 @@ split_boot;
 
 # Screen OC
 case "$ZIPFILE" in
-  *63fps*|*63hz*)
-    ui_print "  • Setting 63 Hz refresh rate"
-    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=1"
+  *62fps*|*62hz*)
+    ui_print "  • Setting 62 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=62"
     ;;
   *66fps*|*66hz*)
     ui_print "  • Setting 66 Hz refresh rate"
-    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=2"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=66"
+    ;;
+  *68fps*|*68hz*)
+    ui_print "  • Setting 68 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=68"
+    ;;
+  *69fps*|*69hz*)
+    ui_print "  • Setting 69 Hz refresh rate"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=69"
     ;;
   *70fps*|*70hz*)
     ui_print "  • Setting 70 Hz refresh rate"
-    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=3"
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=70"
     ;;
   *)
     patch_cmdline "mdss_dsi.framerate_override" ""
