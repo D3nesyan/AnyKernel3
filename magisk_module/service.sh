@@ -4,9 +4,6 @@
 # Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 MODDIR=${0%/*}
 
-# EAS Optimizations
-setprop sys.use_fifo_ui 1
-
 # MemeUI
 # Try to block miuibooster
 # stop miuibooster
