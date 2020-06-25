@@ -18,8 +18,9 @@ echo 5 > /dev/stune/top-app/schedtune.boost
 # echo "60" > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_delay
 
 # Readahead
-echo 128 > /devices/soc/c0c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/read_ahead_kb
-echo 128 > /devices/soc/c0c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/read_ahead_kb
+echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
+echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+echo 128 > /sys/block/dm-0/queue/read_ahead_kb
 
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
