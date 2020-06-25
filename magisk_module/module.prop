@@ -1,7 +1,7 @@
 id=barairo
 name=Majutsu Reiso (魔術礼装)
-version=v3.1
-versionCode=0624
+version=v3.2
+versionCode=0625
 author=Ratoriku
 description=The Majutsu Reiso for PaperMoon. With some EAS optimizations.Remove it if you are going to change kernel. Credits: @uvera
 support=https://github.com/Ratoriku
