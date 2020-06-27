@@ -1,2 +1,2 @@
-# sys.use_fifo_ui=1
+sys.use_fifo_ui=1
 persist.device_config.runtime_native.usap_pool_enabled=true
