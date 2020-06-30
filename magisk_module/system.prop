@@ -1,5 +1,6 @@
 sys.use_fifo_ui=1
 persist.device_config.runtime_native.usap_pool_enabled=true
+debug.sf.latch_unsignaled=1
 debug.sf.high_fps_early_phase_offset_ns=6100000
 debug.sf.high_fps_early_gl_phase_offset_ns=9000000
 debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
