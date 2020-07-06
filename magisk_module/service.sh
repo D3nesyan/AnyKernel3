@@ -24,6 +24,13 @@ echo 128 > /sys/block/dm-0/queue/read_ahead_kb
 echo 128 > /sys/block/dm-1/queue/read_ahead_kb
 echo 128 > /sys/block/dm-2/queue/read_ahead_kb
 
+# Disable MIUI AD
+miui=`getprop ro.miui.notch`
+if [ "$miui" == "1" ]; then
+rm -rf /data/media/0/miad
+echo "" > /data/media/0/miad
+fi
+
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
 

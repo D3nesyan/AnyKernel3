@@ -57,7 +57,7 @@ case "$ZIPFILE" in
     ;;
   *)
     ui_print "Nothing was Detected! Setting default 60 Hz refresh rate..."
-    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=60"
+    patch_cmdline "mdss_dsi.framerate_override" ""
 esac
 
 flash_boot;
