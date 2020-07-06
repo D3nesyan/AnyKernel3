@@ -32,6 +32,9 @@ cp -rf $home/magisk_module /data/adb/modules/barairo;
 ## AnyKernel install
 split_boot;
 
+# Speed up booting
+patch_cmdline "loop.max_part" "loop.max_part=16"
+
 # Screen OC
 ui_print "Detecting Screen OC..."
 case "$ZIPFILE" in
