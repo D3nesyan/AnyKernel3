@@ -9,7 +9,7 @@ MODDIR=${0%/*}
 # stop miuibooster
 
 # TAboost
-echo 5 > /dev/stune/top-app/schedtune.boost
+# echo 5 > /dev/stune/top-app/schedtune.boost
 
 # Sound
 sed -i '/HPHL Volume/c\    <ctl name="HPHL Volume" value="18" />' /vendor/etc/mixer_paths.xml
