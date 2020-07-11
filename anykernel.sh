@@ -32,8 +32,9 @@ cp -rf $home/magisk_module /data/adb/modules/barairo;
 ## AnyKernel install
 split_boot;
 
-# Speed up booting
+# Extra
 patch_cmdline "loop.max_part" "loop.max_part=16"
+patch_cmdline "usbcore.autosuspend" "usbcore.autosuspend=7"
 
 # Screen OC
 ui_print "Detecting Screen OC..."
@@ -57,6 +58,11 @@ case "$ZIPFILE" in
   *70fps*|*70hz*)
     ui_print "Detected! Setting 70 Hz refresh rate..."
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=70"
+    ;;
+  *73fps*|*73hz*)
+    ui_print "Detected! Setting 73 Hz refresh rate..."
+    ui_print "Warning! You’re using the max refresh rate for lavender."
+    patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=73"
     ;;
   *)
     ui_print "Nothing was Detected! Setting default 60 Hz refresh rate..."

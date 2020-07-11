@@ -9,20 +9,11 @@ MODDIR=${0%/*}
 # stop miuibooster
 
 # TAboost
-echo 5 > /dev/stune/top-app/schedtune.boost
+# echo 5 > /dev/stune/top-app/schedtune.boost
 
 # Sound
 sed -i '/HPHL Volume/c\    <ctl name="HPHL Volume" value="18" />' /vendor/etc/mixer_paths.xml
 sed -i '/HPHR Volume/c\    <ctl name="HPHR Volume" value="18" />' /vendor/etc/mixer_paths.xml
-
-# Readahead
-echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
-echo 128 > /sys/block/mmcblk0/queue/read_ahead_kb
-echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-echo 128 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
-echo 128 > /sys/block/dm-0/queue/read_ahead_kb
-echo 128 > /sys/block/dm-1/queue/read_ahead_kb
-echo 128 > /sys/block/dm-2/queue/read_ahead_kb
 
 # Disable MIUI AD
 miui=`getprop ro.miui.notch`
