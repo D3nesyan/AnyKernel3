@@ -8,8 +8,10 @@ MODDIR=${0%/*}
 # Try to block miuibooster
 # stop miuibooster
 
-# TAboost
-# echo 5 > /dev/stune/top-app/schedtune.boost
+# set default schedTune value for foreground/top-app
+echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+echo 10 > /dev/stune/top-app/schedtune.boost
+echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
 # Sound
 sed -i '/HPHL Volume/c\    <ctl name="HPHL Volume" value="18" />' /vendor/etc/mixer_paths.xml
