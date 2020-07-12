@@ -20,6 +20,9 @@ rm -rf /data/media/0/miad
 echo "" > /data/media/0/miad
 fi
 
+# PerfHAL
+setprop vendor.perf.gestureflingboost.enable false
+
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
 
