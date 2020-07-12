@@ -4,10 +4,6 @@
 # Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 MODDIR=${0%/*}
 
-# MemeUI
-# Try to block miuibooster
-# stop miuibooster
-
 # set default schedTune value for foreground/top-app
 echo 1 > /dev/stune/foreground/schedtune.prefer_idle
 echo 10 > /dev/stune/top-app/schedtune.boost
