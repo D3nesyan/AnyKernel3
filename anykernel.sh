@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=PaperMoon Kernel by Ratoriku@github.com
+kernel.string=IceCream Kernel by Ratoriku@github.com
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -26,8 +26,8 @@ ramdisk_compression=auto;
 
 # Extra
 ui_print " " "Creating Majutsu Reiso Magisk Module ..."
-rm -rf /data/adb/modules/barairo;
-cp -rf $home/magisk_module /data/adb/modules/barairo;
+rm -rf /data/adb/modules/icecream;
+cp -rf $home/magisk_module /data/adb/modules/icecream;
 
 ## AnyKernel install
 split_boot;
