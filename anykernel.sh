@@ -11,6 +11,8 @@ do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=lavender
+device.name2=wayne
+device.name3=whyred
 supported.versions=
 supported.patchlevels=
 '; } # end properties
@@ -25,7 +27,7 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
-ui_print " " "Creating Majutsu Reiso Magisk Module ..."
+ui_print " " "Creating Ice-Cream Magisk Module ..."
 rm -rf /data/adb/modules/icecream;
 cp -rf $home/magisk_module /data/adb/modules/icecream;
 
