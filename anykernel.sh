@@ -36,7 +36,6 @@ split_boot;
 
 # Extra
 patch_cmdline "loop.max_part" "loop.max_part=16"
-patch_cmdline "usbcore.autosuspend" "usbcore.autosuspend=7"
 
 # Screen OC
 ui_print "Detecting Screen OC..."
