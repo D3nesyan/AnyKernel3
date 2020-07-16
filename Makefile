@@ -1,6 +1,6 @@
-NAME ?= PaperMoon-Kernel-R4.0
+NAME ?= IceCream
 
-VERSION ?= lavender
+VERSION ?= temp
 
 DATE := $(shell date +'%m%d-%H%M')
 
