@@ -1,7 +1,7 @@
 id=icecream
 name=Ice-Cream
-version=v4.0
-versionCode=0713
+version=v4.1
+versionCode=0716
 author=Ratoriku
-description=The specfic magisk module for IceCream Kernel. With EAS optimizations.Remove it if you are going to change kernel. Perf config moded from @uvera
+description=The specfic magisk module for IceCream Kernel. With EAS optimizations.Remove it if you are going to change kernel.
 support=https://t.me/Ratoriku
