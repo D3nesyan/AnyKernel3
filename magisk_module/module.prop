@@ -1,7 +1,7 @@
 id=icecream
-name=Ice-Cream
+name=PaperMoon
 version=v4.1
 versionCode=0716
 author=Ratoriku
-description=The specfic magisk module for IceCream Kernel. With EAS optimizations.Remove it if you are going to change kernel.
+description=The specfic magisk module for PaperMoon Kernel. With EAS optimizations.Remove it if you are going to change kernel.
 support=https://t.me/Ratoriku
