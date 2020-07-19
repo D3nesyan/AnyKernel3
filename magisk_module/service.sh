@@ -20,8 +20,9 @@ rm -rf /data/media/0/miad
 echo "" > /data/media/0/miad
 fi
 
-# PerfHAL
+# Optimizations
 setprop vendor.perf.gestureflingboost.enable false
+stop energy-awareness
 
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
