@@ -23,6 +23,9 @@ fi
 # Optimizations
 setprop vendor.perf.gestureflingboost.enable false
 stop energy-awareness
+if [ "$miui" == "1" ]; then
+stop miuibooster
+fi
 
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml
