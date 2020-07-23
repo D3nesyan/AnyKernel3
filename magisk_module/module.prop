@@ -3,5 +3,5 @@ name=PaperMoon
 version=v4.2
 versionCode=0719
 author=Ratoriku
-description=The specfic magisk module for PaperMoon Kernel. With EAS optimizations.Remove it if you are going to change kernel.
+description=The specfic magisk module for PaperMoon Kernel. With EAS optimizations. Remove it if you are going to change kernel.
 support=https://t.me/Ratoriku

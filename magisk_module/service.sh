@@ -4,11 +4,6 @@
 # Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 MODDIR=${0%/*}
 
-# set default schedTune value for foreground/top-app
-echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-echo 10 > /dev/stune/top-app/schedtune.boost
-echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-
 # Sound
 sed -i '/HPHL Volume/c\    <ctl name="HPHL Volume" value="18" />' /vendor/etc/mixer_paths.xml
 sed -i '/HPHR Volume/c\    <ctl name="HPHR Volume" value="18" />' /vendor/etc/mixer_paths.xml
