@@ -45,27 +45,33 @@ ui_print "Detecting Screen OC..."
 case "$ZIPFILE" in
   *62fps*|*62hz*)
     ui_print "Detected! Setting 62 Hz refresh rate..."
+    ui_print "WARNING: Use screen oc AT YOUR RISK"
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=62"
     ;;
   *66fps*|*66hz*)
     ui_print "Detected! Setting 66 Hz refresh rate..."
+    ui_print "WARNING: Use screen oc AT YOUR RISK"
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=66"
     ;;
   *68fps*|*68hz*)
     ui_print "Detected! Setting 68 Hz refresh rate..."
+    ui_print "WARNING: Use screen oc AT YOUR RISK"
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=68"
     ;;
   *69fps*|*69hz*)
     ui_print "Detected! Setting 69 Hz refresh rate..."
+    ui_print "WARNING: Use screen oc AT YOUR RISK"
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=69"
     ;;
   *70fps*|*70hz*)
     ui_print "Detected! Setting 70 Hz refresh rate..."
+    ui_print "WARNING: Use screen oc AT YOUR RISK"
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=70"
     ;;
   *73fps*|*73hz*)
     ui_print "Detected! Setting 73 Hz refresh rate..."
-    ui_print "Warning! You’re using the max refresh rate for lavender."
+    ui_print "WARNING: Use screen oc AT YOUR RISK"
+    ui_print "You’re using the max refresh rate for lavender currently."
     patch_cmdline "mdss_dsi.framerate_override" "mdss_dsi.framerate_override=73"
     ;;
   *)
