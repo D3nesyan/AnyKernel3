@@ -16,11 +16,18 @@ echo "" > /data/media/0/miad
 fi
 
 # Optimizations
-setprop vendor.perf.gestureflingboost.enable false
 stop energy-awareness
 if [ "$miui" == "1" ]; then
 stop miuibooster
 fi
+sysctl kernel.randomize_va_space=0
+sysctl kernel.sched_child_runs_first=1
+
+# Block Settings Restore
+for i in /sys/block/*/queue do
+	echo 128 > $i/nr_requests
+	echo 128 > $i/read_ahead_kb
+done
 
 # com.tencent.tmgp.sgame
 File=/data/data/com.tencent.tmgp.sgame/shared_prefs/com.tencent.tmgp.sgame.v2.playerprefs.xml

@@ -31,9 +31,6 @@ ui_print " " "Creating PaperMoon Magisk Module ..."
 rm -rf /data/adb/modules/icecream;
 cp -rf $home/magisk_module /data/adb/modules/icecream;
 
-# Remove conflict Magisk Modules
-rm -rf /data/adb/modules/qti-mem-opt
-
 ## AnyKernel install
 split_boot;
 
