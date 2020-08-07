@@ -20,7 +20,7 @@ stop energy-awareness
 if [ "$miui" == "1" ]; then
 stop miuibooster
 fi
-sysctl kernel.randomize_va_space=0
+
 sysctl kernel.sched_child_runs_first=1
 
 # Block Settings Restore
