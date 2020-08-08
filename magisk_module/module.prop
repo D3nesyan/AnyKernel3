@@ -1,7 +1,7 @@
 id=icecream
 name=PaperMoon
-version=v4.7
-versionCode=0804
+version=v4.8
+versionCode=0808
 author=Ratoriku
 description=The specfic magisk module for PaperMoon Kernel. With EAS optimizations. Remove it if you are going to change kernel.
 support=https://t.me/Ratoriku
