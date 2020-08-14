@@ -21,6 +21,7 @@ if [ "$miui" == "1" ]; then
 stop miuibooster
 fi
 sysctl kernel.sched_child_runs_first=1
+sysctl kernel.sched_wakeup_granularity_ns=5000000
 
 # Block Settings Restore
 for i in /sys/block/*/queue do
