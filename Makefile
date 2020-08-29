@@ -1,6 +1,6 @@
-NAME ?= IceCream
+NAME ?= PaperMoon
 
-VERSION ?= temp
+VERSION ?= Snapshot
 
 DATE := $(shell date +'%m%d-%H%M')
 

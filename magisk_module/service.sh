@@ -4,10 +4,6 @@
 # Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 MODDIR=${0%/*}
 
-# Sound
-sed -i '/HPHL Volume/c\    <ctl name="HPHL Volume" value="18" />' /vendor/etc/mixer_paths.xml
-sed -i '/HPHR Volume/c\    <ctl name="HPHR Volume" value="18" />' /vendor/etc/mixer_paths.xml
-
 # Disable MIUI AD
 miui=`getprop ro.miui.notch`
 if [ "$miui" == "1" ]; then
@@ -23,6 +19,9 @@ fi
 sysctl kernel.sched_child_runs_first=1
 sysctl kernel.sched_wakeup_granularity_ns=5000000
 sysctl kernel.sched_rt_runtime_us=980000
+
+# 修复王者荣耀闪退
+chmod 000 /data/data/com.tencent.tmgp.sgame/files/tss_tmp
 
 # Block Settings Restore
 for i in /sys/block/*/queue do
