@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-# PaperMoon Specific Magisk Module
+# Meow Specific Magisk Module
 # Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 MODDIR=${0%/*}
 
@@ -16,9 +16,6 @@ stop energy-awareness
 if [ "$miui" == "1" ]; then
 stop miuibooster
 fi
-sysctl kernel.sched_child_runs_first=1
-sysctl kernel.sched_wakeup_granularity_ns=5000000
-sysctl kernel.sched_rt_runtime_us=980000
 
 # 修复王者荣耀闪退
 chmod 000 /data/data/com.tencent.tmgp.sgame/files/tss_tmp

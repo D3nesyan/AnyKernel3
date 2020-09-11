@@ -1,4 +1,4 @@
-NAME ?= PaperMoon
+NAME ?= MeowKernel
 
 VERSION ?= Snapshot
 

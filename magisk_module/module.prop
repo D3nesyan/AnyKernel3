@@ -1,7 +1,7 @@
-id=icecream
-name=PaperMoon
-version=v5.0
-versionCode=0829
+id=meow
+name=Meow
+version=r1
+versionCode=0911
 author=Ratoriku
-description=The specfic magisk module for PaperMoon Kernel. With EAS optimizations. Remove it if you are going to change kernel.
+description=The specfic magisk module for MeowKernel. With EAS optimizations. Remove it if you are going to change kernel.
 support=https://t.me/Ratoriku

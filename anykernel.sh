@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=PaperMoon Kernel by Ratoriku@github.com
+kernel.string=MeowKernel by Ratoriku
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -26,15 +26,12 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
-ui_print " " "Creating PaperMoon Magisk Module ..."
-rm -rf /data/adb/modules/icecream;
-cp -rf $home/magisk_module /data/adb/modules/icecream;
+ui_print " " "Creating Meow Magisk Module ..."
+rm -rf /data/adb/modules/meow;
+cp -rf $home/magisk_module /data/adb/modules/meow;
 
 ## AnyKernel install
 split_boot;
-
-# Extra
-patch_cmdline "loop.max_part" "loop.max_part=16"
 
 # Simple LMK adj table
 sdk=$(file_getprop /system/build.prop ro.build.version.sdk);
