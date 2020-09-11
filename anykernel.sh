@@ -12,7 +12,6 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=lavender
 device.name2=wayne
-device.name3=whyred
 supported.versions=
 supported.patchlevels=
 '; } # end properties
@@ -36,6 +35,14 @@ split_boot;
 
 # Extra
 patch_cmdline "loop.max_part" "loop.max_part=16"
+
+# Simple LMK adj table
+sdk=$(file_getprop /system/build.prop ro.build.version.sdk);
+if [ $sdk -ge 29 ]; then
+patch_cmdline "android_helper.android_sdk_version" "android_helper.android_sdk_version=29"
+else
+patch_cmdline "android_helper.android_sdk_version" "android_helper.android_sdk_version=28"
+fi
 
 # Screen OC
 ui_print "Detecting Screen OC..."
