@@ -17,9 +17,6 @@ if [ "$miui" == "1" ]; then
 stop miuibooster
 fi
 
-# 修复王者荣耀闪退
-chmod 000 /data/data/com.tencent.tmgp.sgame/files/tss_tmp
-
 # Block Settings Restore
 for i in /sys/block/*/queue do
 	echo 128 > $i/nr_requests
