@@ -33,6 +33,19 @@ cp -rf $home/magisk_module /data/adb/modules/meow;
 ## AnyKernel install
 split_boot;
 
+# Clean Up
+patch_cmdline "sched_use_hmp" ""
+patch_cmdline "lpm_levels.sleep_disabled" ""
+patch_cmdline "sched_enable_power_aware" ""
+patch_cmdline "loop.max_part" "loop.max_part=16"
+
+# Disable MIUI AD
+miui=$(file_getprop /system/build.prop ro.miui.notch);
+if [ "$miui" == "1" ]; then
+rm -rf /data/media/0/miad
+echo "" > /data/media/0/miad
+fi
+
 # Simple LMK adj table
 sdk=$(file_getprop /system/build.prop ro.build.version.sdk);
 if [ $sdk -ge 29 ]; then
