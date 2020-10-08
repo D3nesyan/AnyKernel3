@@ -37,7 +37,7 @@
 
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
-            Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="sdm660" Kernel="4.4"
+            Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="sdm660"
             Resources="0x40C5C000, 50" />
 
     <!--Vertical Scroll boost-->
@@ -46,12 +46,12 @@
 
         <!-- Type="1", Vertical Scroll boost -->
         <Config
-            Id="0x00001080" Type="1" Enable="true" Target="sdm660" Resolution="1080p" Kernel="4.4"
+            Id="0x00001080" Type="1" Enable="true" Target="sdm660" Resolution="1080p"
             Resources="0x40C00000, 2,
                        0x40C5C000, 40"  />
 
         <Config
-            Id="0x00001080" Type="1" Enable="true" Target="sdm660" Resolution="2560" Kernel="4.4"
+            Id="0x00001080" Type="1" Enable="true" Target="sdm660" Resolution="2560"
             Resources="0x40C00000, 2,
                        0x4280C000, 266"  />
 
@@ -61,11 +61,11 @@
 
         <!-- Type="2", Horizontal Scroll boost -->
         <Config
-            Id="0x00001080" Type="2" Enable="true" Target="sdm660" Resolution="1080p" Kernel="4.4"
+            Id="0x00001080" Type="2" Enable="true" Target="sdm660" Resolution="1080p"
             Resources="0x40C00000, 2,
                        0x40C5C000, 40"  />
         <Config
-            Id="0x00001080" Type="2" Enable="true" Target="sdm660" Resolution="2560" Kernel="4.4"
+            Id="0x00001080" Type="2" Enable="true" Target="sdm660" Resolution="2560"
             Resources="0x40C00000, 2,
                        0x4280C000, 266"  />
 
@@ -75,12 +75,12 @@
 
         <!-- Type="4", Pre-Fling boost -->
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="1080p" Kernel="4.4"
+            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="1080p"
             Resources="0x40C00000, 2,
                        0x40C5C000, 40"  />
 
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="2560" Kernel="4.4"
+            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="2560"
             Resources="0x40C00000, 2,
                        0x4280C000, 266"  />
 
