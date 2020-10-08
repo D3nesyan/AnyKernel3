@@ -1,7 +1,7 @@
 id=meow
 name=Meow
-version=r3
-versionCode=1003
+version=r4
+versionCode=1008
 author=Ratoriku
 description=The specfic magisk module for MeowKernel. With EAS optimizations. Remove it if you are going to change kernel.
 support=https://t.me/Ratoriku
