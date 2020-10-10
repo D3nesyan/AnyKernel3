@@ -49,11 +49,11 @@
 
         <!-- Type="4", Pre-Fling boost -->
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="1080p"
+            Id="0x00001080" Type="4" Enable="true" Timeout="64" Target="sdm660" Resolution="1080p"
             Resources="0x40C00000, 2"  />
 
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="2560"
+            Id="0x00001080" Type="4" Enable="true" Timeout="64" Target="sdm660" Resolution="2560"
             Resources="0x40C00000, 2"  />
 
     <!--Drag boost-->
