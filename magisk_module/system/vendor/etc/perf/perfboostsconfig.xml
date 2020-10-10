@@ -50,7 +50,6 @@
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdm660" Resolution="2560"
             Resources="0x40C00000, 2"  />
 
-
     <!--Drag boost-->
         <!-- SCHEDBOOST resource opcode, value-->
 
@@ -59,5 +58,17 @@
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="sdm660"
             Resources="0x40C00000, 0x2" />
 
+    <!--Display on Resource -->
+        <!-- Display on resource opcode, value -->
+        <Config
+                Id="0x00001041" Enable="true" Timeout="0" Target="sdm660"
+                Resources="0x40000000, 1" />
+ 
+    <!--Display off Resource -->
+        <!-- Display on resource opcode, value -->
+        <Config
+                Id="0x00001040" Enable="true" Timeout="0" Target="sdm660"
+                Resources="0x40000000, 0x0" />
+ 
     </PerfBoost>
 </BoostConfigs>
