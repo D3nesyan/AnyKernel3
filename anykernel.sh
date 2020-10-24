@@ -34,9 +34,6 @@ cp -rf $home/magisk_module /data/adb/modules/meow;
 split_boot;
 
 # Clean Up
-patch_cmdline "sched_use_hmp" ""
-patch_cmdline "lpm_levels.sleep_disabled" ""
-patch_cmdline "sched_enable_power_aware" ""
 patch_cmdline "loop.max_part" "loop.max_part=16"
 
 # Disable MIUI AD
