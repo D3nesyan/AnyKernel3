@@ -12,6 +12,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=lavender
 device.name2=wayne
+device.name2=tulip
 supported.versions=
 supported.patchlevels=
 '; } # end properties
