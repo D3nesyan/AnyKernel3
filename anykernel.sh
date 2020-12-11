@@ -11,8 +11,6 @@ do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=lavender
-device.name2=wayne
-device.name2=tulip
 supported.versions=
 supported.patchlevels=
 '; } # end properties
@@ -26,16 +24,8 @@ ramdisk_compression=auto;
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
-# Extra
-ui_print " " "Creating Meow Magisk Module ..."
-rm -rf /data/adb/modules/meow;
-cp -rf $home/magisk_module /data/adb/modules/meow;
-
 ## AnyKernel install
 split_boot;
-
-# Clean Up
-patch_cmdline "loop.max_part" "loop.max_part=16"
 
 flash_boot;
 flash_dtbo;
