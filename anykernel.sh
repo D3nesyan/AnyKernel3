@@ -44,6 +44,14 @@ rm -rf /data/media/0/miad
 echo "" > /data/media/0/miad
 fi
 
+# Simple LMK adj table
+sdk=$(file_getprop /system/build.prop ro.build.version.sdk);
+if [ $sdk -ge 29 ]; then
+patch_cmdline "android_helper.android_sdk_version" "android_helper.android_sdk_version=29"
+else
+patch_cmdline "android_helper.android_sdk_version" "android_helper.android_sdk_version=28"
+fi
+
 # Screen OC
 ui_print "Detecting Screen OC..."
 case "$ZIPFILE" in
