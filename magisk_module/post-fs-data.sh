@@ -7,9 +7,3 @@
 MODDIR=${0%/*}
 
 # This script will be executed in post-fs-data mode
-
-# I/O Boost to max
-for i in /sys/block/*/queue do
-  echo 256 > $i/nr_requests
-  echo 2048 > $i/read_ahead_kb
-done

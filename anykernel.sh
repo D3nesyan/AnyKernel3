@@ -11,8 +11,6 @@ do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=lavender
-device.name2=wayne
-device.name2=tulip
 supported.versions=
 supported.patchlevels=
 '; } # end properties
@@ -33,9 +31,6 @@ cp -rf $home/magisk_module /data/adb/modules/meow;
 
 ## AnyKernel install
 split_boot;
-
-# Clean Up
-patch_cmdline "loop.max_part" "loop.max_part=16"
 
 # Disable MIUI AD
 miui=$(file_getprop /system/build.prop ro.miui.notch);
