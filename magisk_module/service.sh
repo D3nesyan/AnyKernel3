@@ -1,7 +1,4 @@
 #!/system/bin/sh
-
-# Meow Specific Magisk Module
-# Copyright (C) 2020 Ratoriku <a1063021545@gmail.com>
 MODDIR=${0%/*}
 
 # Optimizations
@@ -19,4 +16,5 @@ function write() {
 for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
 do
     write $memlat/governor "powersave"
+    chmod 0444 $memlat/governor
 done
