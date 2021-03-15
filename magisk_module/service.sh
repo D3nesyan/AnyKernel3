@@ -8,13 +8,6 @@ if [ "$miui" == "1" ]; then
 stop miuibooster
 fi
 
-function write() {
-    echo -n $2 > $1
-}
-
-# Use powersave governor for memlat
-for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
-do
-    write $memlat/governor "powersave"
-    chmod 0444 $memlat/governor
-done
+#function write() {
+#    echo -n $2 > $1
+#}

@@ -485,4 +485,4 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " "Enjoy !";
+ui_print " " "Done !";
