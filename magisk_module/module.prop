@@ -1,7 +1,7 @@
 id=meow
 name=Meow
-version=r25
-versionCode=20210315
+version=r31
+versionCode=20210424
 author=Ratoriku
 description=Optimizations for MeowKernel
 support=https://t.me/Ratoriku

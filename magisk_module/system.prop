@@ -1,3 +1,0 @@
-persist.device_config.runtime_native.usap_pool_enabled=true
-debug.sf.latch_unsignaled=1
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
