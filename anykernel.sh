@@ -25,9 +25,15 @@ ramdisk_compression=auto;
 . tools/ak3-core.sh;
 
 # Extra
-ui_print " " "Creating Meow Magisk Module ..."
-rm -rf /data/adb/modules/meow;
-cp -rf $home/magisk_module /data/adb/modules/meow;
+if [ ! -e "/vendor/etc/powerhint.json" ]; then
+  ui_print " " "HMP ROM Detected!"
+  ui_print "Creating Meow Magisk Module..."
+  rm -rf /data/adb/modules/meow;
+  cp -rf $home/magisk_module /data/adb/modules/meow;
+else
+  ui_print " " "EAS ROM Detected!"
+  ui_print "Skipping Magisk Module installation"
+fi
 
 ## AnyKernel install
 split_boot;
