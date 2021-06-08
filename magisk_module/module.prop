@@ -1,7 +1,7 @@
 id=meow
-name=Meow
-version=r31
-versionCode=20210424
+name=MeowModule
+version=V1
+versionCode=
 author=Ratoriku
-description=Optimizations for MeowKernel
-support=https://t.me/Ratoriku
+description=A simple module to silence perfd log spam in HMP rom
+support=https://t.me/RatorikuStudio_Support
