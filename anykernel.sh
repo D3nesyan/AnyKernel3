@@ -38,13 +38,6 @@ fi
 ## AnyKernel install
 split_boot;
 
-# Disable MIUI AD
-miui=$(file_getprop /system/build.prop ro.miui.notch);
-if [ "$miui" == "1" ]; then
-rm -rf /data/media/0/miad
-echo "" > /data/media/0/miad
-fi
-
 # Screen OC
 ui_print "Detecting Screen OC..."
 case "$ZIPFILE" in
