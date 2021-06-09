@@ -32,7 +32,7 @@ if [ ! -e "/vendor/etc/powerhint.json" ]; then
   cp -rf $home/magisk_module /data/adb/modules/meow;
 else
   ui_print " " "EAS ROM Detected!"
-  ui_print "Skipping Magisk Module installation"
+  ui_print "Skipping Magisk Module installation..."
 fi
 
 ## AnyKernel install
