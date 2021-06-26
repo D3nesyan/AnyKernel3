@@ -360,6 +360,7 @@ flash_boot() {
   if [ $? != 0 ]; then
     abort "Repacking image failed. Aborting...";
   fi;
+  [ -f .magisk ] && touch $home/magisk_patched;
 
   cd $home;
   if [ -f "$bin/futility" -a -d "$bin/chromeos" ]; then
@@ -418,12 +419,13 @@ flash_dtbo() {
     fi;
   done;
 
-  if [ "$dtbo" ]; then
+  if [ "$dtbo" -a ! -f dtbo_flashed ]; then
     dtboblock=/dev/block/bootdevice/by-name/dtbo$slot;
     if [ ! -e "$dtboblock" ]; then
       abort "dtbo partition could not be found. Aborting...";
     fi;
     blockdev --setrw $dtboblock 2>/dev/null;
+    ui_print " " "$dtboblock";
     if [ -f "$bin/flash_erase" -a -f "$bin/nandwrite" ]; then
       $bin/flash_erase $dtboblock 0 0;
       $bin/nandwrite -p $dtboblock $dtbo;
@@ -436,6 +438,7 @@ flash_dtbo() {
     if [ $? != 0 ]; then
       abort "Flashing dtbo failed. Aborting...";
     fi;
+    touch dtbo_flashed;
   fi;
 }
 ### write_boot (repack ramdisk then build, sign and write image and dtbo)
@@ -706,14 +709,17 @@ setup_ak() {
     ;;
   esac;
 
-  # automate multi-partition setup for boot_img_hdr_v3 + vendor_boot
+  # automate simple multi-partition setup for boot_img_hdr_v3 + vendor_boot
   cd $home;
-  if [ -e "/dev/block/bootdevice/by-name/vendor_boot$slot" -a -f dtb -a ! -f vndr_setup ]; then
-    mkdir boot-files;
+  if [ -e "/dev/block/bootdevice/by-name/vendor_boot$slot" -a ! -f vendor_setup ] && [ -f dtb -o -d vendor_ramdisk -o -d vendor_patch ]; then
+    echo "Setting up for simple automatic vendor_boot flashing..." >&2;
+    (mkdir boot-files;
     mv -f Image* ramdisk patch boot-files;
     mkdir vendor_boot-files;
     mv -f dtb vendor_boot-files;
-    touch vndr_setup;
+    mv -f vendor_ramdisk vendor_boot-files/ramdisk;
+    mv -f vendor_patch vendor_boot-files/patch) 2>/dev/null;
+    touch vendor_setup;
   fi;
 
   # allow multi-partition ramdisk modifying configurations (using reset_ak)
@@ -722,7 +728,7 @@ setup_ak() {
     if [ "$(ls $blockfiles 2>/dev/null)" ]; then
       cp -af $blockfiles/* $home;
     else
-      mkdir -p $blockfiles;
+      mkdir $blockfiles;
     fi;
     touch $blockfiles/current;
   fi;
