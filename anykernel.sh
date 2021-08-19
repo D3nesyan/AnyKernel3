@@ -38,45 +38,6 @@ fi
 ## AnyKernel install
 split_boot;
 
-# Screen OC
-ui_print "Detecting Screen OC..."
-case "$ZIPFILE" in
-  *62fps*|*62hz*)
-    ui_print "Detected! Setting 62 Hz refresh rate..."
-    ui_print "WARNING: Use screen oc AT YOUR RISK"
-    patch_cmdline "mdss_dsi.cur_refresh_rate" "mdss_dsi.cur_refresh_rate=62"
-    ;;
-  *66fps*|*66hz*)
-    ui_print "Detected! Setting 66 Hz refresh rate..."
-    ui_print "WARNING: Use screen oc AT YOUR RISK"
-    patch_cmdline "mdss_dsi.cur_refresh_rate" "mdss_dsi.cur_refresh_rate=66"
-    ;;
-  *68fps*|*68hz*)
-    ui_print "Detected! Setting 68 Hz refresh rate..."
-    ui_print "WARNING: Use screen oc AT YOUR RISK"
-    patch_cmdline "mdss_dsi.cur_refresh_rate" "mdss_dsi.cur_refresh_rate=68"
-    ;;
-  *69fps*|*69hz*)
-    ui_print "Detected! Setting 69 Hz refresh rate..."
-    ui_print "WARNING: Use screen oc AT YOUR RISK"
-    patch_cmdline "mdss_dsi.cur_refresh_rate" "mdss_dsi.cur_refresh_rate=69"
-    ;;
-  *70fps*|*70hz*)
-    ui_print "Detected! Setting 70 Hz refresh rate..."
-    ui_print "WARNING: Use screen oc AT YOUR RISK"
-    patch_cmdline "mdss_dsi.cur_refresh_rate" "mdss_dsi.cur_refresh_rate=70"
-    ;;
-  *73fps*|*73hz*)
-    ui_print "Detected! Setting 73 Hz refresh rate..."
-    ui_print "WARNING: Use screen oc AT YOUR RISK"
-    ui_print "You’re using the max refresh rate for lavender currently."
-    patch_cmdline "mdss_dsi.cur_refresh_rate" "mdss_dsi.cur_refresh_rate=73"
-    ;;
-  *)
-    ui_print "Nothing was Detected! Setting default 60 Hz refresh rate..."
-    patch_cmdline "mdss_dsi.cur_refresh_rate" ""
-esac
-
 flash_boot;
 flash_dtbo;
 ## end install
